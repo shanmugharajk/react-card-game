@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Site Properties -->
+    <title>react-card-game</title>
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700">
+    <link rel="stylesheet" type="text/css" href="vendors/semantic/semantic.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/main.css">
+
+    <script src="vendors/semantic/jquery-3.1.1.min.js"></script>
+    <script src="vendors/semantic/semantic.js"></script>
+</head>
+
+<body>
+    <div class="content">
+        <div class="ui inverted vertical masthead center aligned segment">
+
+            <div class="ui container">
+                <div class="ui large secondary inverted pointing menu">
+                    <a class="item" href="#about">About</a>
+                    <a class="item" href="#technologies">Technologies</a>
+                    <a class="item" href="#rules">Game Rules</a>
+                    <a class="item" href="#todos">Todos</a>
+                    <div class="right item">
+                        <a class="ui inverted button" href="https://github.com/shansfk/react-card-game" target="_blank"><i class="github icon"></i>Source Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ui text container">
+                <h1 class="ui inverted header">
+                    react-card-game
+                </h1>
+                <h2>Multiplayer card game built on socket.io & ReactJs</h2>
+            </div>
+
+        </div>
+
+        <div class="ui vertical stripe segment">
+            <div class="ui stackable grid container">
+                <div class="row">
+                    <div id="about" class="sixteen wide top column">
+                        <h3 class="title">About</h3>
+                        <p>This is a fun game to play with deck of cards. The main objective of this game is whoever losses all his first is the winner. In my journey of learning ReactJs, Redux, NodeJs I wanted to do some experiment with what I learnt with a small use case. I got an idea of this game which I used to play in childhood is a right fit.</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="technologies" class="sixteen wide top column">
+                        <h3 class="title">Technologies Used</h3>
+                        <ul>
+                            <li>NodeJS/Socket.io</li>
+                            <li>ReactJs</li>
+                            <li>Redux</li>
+                            <li>Redis</li>
+                            <li>Semantic UI React</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div id="rules" class="sixteen wide top column">
+                        <h3 class="title">Game Rules</h3>
+
+                        <h4>Registration</h4>
+                        <p>User has to register with username and passsword. The length should be morethan or equal to 6 charcter. If the username is already taken a notification will be shown.</p>
+
+
+                        <h4>Login</h4>
+                        <p>After successfully registered, user has to login to play with the credentials to start playing the game. This is a six player game. So once after login user has to wait till he gets a notification saying he can start playing. The game will monitor logins and once it finds that 6 players are waiting to play then it will start a game session and notify all players.</p>
+
+
+                        <h4>Game session</h4>
+                        <p>Once game session is created and all players got notification then "players turn" will be dicided by the game automatically and the corresponding player will recieve notication saying <i><b>"its ur turn"</b></i>.</p>
+
+
+                        <h4>Players turn</h4>
+                        <p>Once a player gets turn notification, he has only 50 seconds to drop a card. Dropping a card means he needs to just select any card. Once selected the selecting ability will be disabled and the selected card will be moved to the dropping area in the right corner of the page.</p>
+
+                        <h4>Rules for dropping a card</h4>
+                        <ul>
+                            <li>If the player is dropping card <i>in first turn</i>, then he has no limitations. He can drop any card.</li>
+                            <li>If the player is dropping card <i>in second or greater than second turn</i> then he has to mandatorily drop a card of the same suit which other players had dropped unless he doesn't have a same suit.</li>
+                            <li>If he has same suit and didn't drop then it is considered as cheating and he will get penality. The penality will be one card added to his account</li>
+                            <li>Incase if the player (2nd or > 2nd turn) doesn't have a same suit dropped by the previous player, then in this situation game will check whomever put the highest weighted card in the round and transfer all the dropped cards and the current dropped card of different suit to his account.</li>
+                        </ul>
+
+                        <h4>Example 01</h4>
+                        <div>
+                            player 1 - spade 8
+                            <br> player 2 - spade 2
+                            <br> player 3 - heart King (He really has no spade suit)
+
+                            <h5>Round result</h5>
+                            player 1 will recieve spade 8, spade 2, heart king. And turn will be moved to player 1.
+
+                            <h5>Reason for round close</h5>
+                            Since before all the six players drop a card different suit got dropped.
+                        </div>
+
+                        <h4>Example 02</h4>
+                        <div>
+                            player 1 - clever 9
+                            <br>player 2 - clever 1
+                            <br>player 3 - clever 3
+                            <br>player 4 - clever 6
+                            <br>player 5 - clever Ace
+                            <br>player 6 - clever Jack
+
+                            <h5>Round result</h5>
+                            This is a normal round. No player will gets card since all dropped same suit.
+
+                            <h5>Reason for round close</h5>
+                            All players dropped card.
+                        </div>
+
+
+                        <h4>Example 03</h4>
+                        <div>
+                            player 1 - spade 8
+                            <br>player 2 - spade 4
+                            <br>player 3 - diamond A (he has spade but he tries to cheat).
+                            <br>player 4, 5, 6 puts spade with some numbers.
+
+                            <h5>Round result</h5>
+                            This is also a normal, except player 3 will get a penality (one card will be added to his account).
+
+                            <h5>Reason for round close</h5>
+                            All players dropped card.
+                        </div>
+
+                        <h4>Example 04</h4>
+                        <div>
+                            player 1 - spade 8
+                            <br>player 2 - spade 4
+                            <br>player 3 - diamond A (he has spade but he tries to cheat).
+                            <br>player 4, 5 puts spade King and spade Jack respectively.
+                            <br> player 6 puts diamond Ace (he really doesn't have spade suit)
+
+                            <h5>Round result</h5>
+                            Now player 4 will get all dropped cards added to his account and turn will be moved to him, Since he dropped the highest weightage suit in the round.
+
+                            <h5>Reason for round close</h5>
+                            All players dropped card.
+                        </div>
+
+                        <h4>Penality</h4>
+                        <p>Players will recieve penality when they try to cheat as stated earlier or if they failed to drop card in the given 50 seconds.</p>
+
+                        <h4>Winner</h4>
+                        <p>Whoever loses all his cards first then he is the winner. Once game detects if any player has no cards to drop at the end of the round then it will declare that player as winner and notification will be sent to all players.</p>
+
+                        <h3>Some of the cavets</h3>
+                        <ul>
+                            <li>
+                                Player should not refresh the browser. If he refreshes the browser socket disconnection will happen and he will be disconnected from the game. So if any player does refresh the browser while playing then that game will be abandoned and all players will recieve a notification saying "Game is abandoned".
+                            </li>
+                            <li>
+                                The same case will happen when user clicks play again in the middle of the game. He will be disconnected from the current game session and a new session will be allocated to him. The current game will be abandoned without any results.
+                            </li>
+                        </ul>
+
+                        <h3 id="todos">TODO's</h3>
+                        <ul>
+                            <li> Code refinement</li>
+                            <li>Improved error messages and error handling</li>
+                            <li>Overcome the cavets mentioned above</li>
+                        </ul>
+
+                        <p>All suggestions are welcome, contact me at <i>ksrajbe@gmail.com</i>. Or give a pull request.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        <div class="ui container large secondary inverted pointing menu">
+            <a class="item" href="#about">About</a>
+            <a class="item" href="#technologies">Technologies</a>
+            <a class="item" href="#rules">Game Rules</a>
+            <a class="item" href="#todos">Todos</a>
+
+            <div class="right item">
+                <a class="ui inverted button" href="https://github.com/shansfk/react-card-game" target="_blank"><i class="github icon"></i>Source Code</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
