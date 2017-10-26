@@ -1,6 +1,9 @@
 # react-card-game
 A multiplayer game built on Socket.io, React-redux and Redis.
 
+## Project URL
+https://shanmugharajk.github.io/react-card-game/
+
 ## To run
 
 ### Pre requisites
