@@ -42,4 +42,4 @@ yarn run start-win
 
 (Note : Sometimes while running the server for the first time it may fail. so run the same command again and it should be fine.)
 
-Regarding the rules and for more information about the game please refer [link here](https://shansfk.github.io/react-card-game/.)
+Regarding the rules and for more information about the game please refer [link here](https://shanmugharajk.github.io/react-card-game/)
