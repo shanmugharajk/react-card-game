@@ -2,6 +2,8 @@
 
 A multliplayer game built with socket.io + react + nodejs + typescript.
 
+Demo [heroku link](https://ts-react-card-game.herokuapp.com/)
+
 ## How to run
 
 Navigate to the root directory and run the following.
@@ -27,5 +29,4 @@ To know about the rule's execute the above mentioned commands and navigate to <h
 - Improve the build system.
 - Create a roadmap.
 - Use redis to store the game data.
-- Deploy in heroku with docker image.
 - Build a project site explaining the architectue, how to play and demo etc..

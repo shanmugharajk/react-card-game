@@ -6,7 +6,7 @@ import { SocketServer } from "../core/SocketServer";
 import { LoggerService } from "../services/LoggerService";
 
 const path = require("path");
-const PORT = 4500;
+const PORT = process.env.PORT || 4500;
 const app = express();
 
 app.use(express.static(path.join(__dirname, "../../client")));

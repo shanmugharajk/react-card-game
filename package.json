@@ -2,13 +2,7 @@
   "name": "react-card-game",
   "private": true,
   "workspaces": {
-    "packages": ["packages/*"],
-    "nohoist": [
-      "**/nodemon",
-      "**/nodemon/**",
-      "**/rimraf",
-      "**/rimraf/**"
-    ]
+    "packages": ["packages/*"]
   },
   "scripts": {
     "run-client": "cd ./packages/web && yarn start",
