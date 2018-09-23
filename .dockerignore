@@ -1,0 +1,8 @@
+*
+!./package.json
+!./packages/game-server/package.json
+!./packages/common/package.json
+
+!./packages/game-server/dist
+!./packages/game-server/client
+!./packages/common/dist
