@@ -4,6 +4,7 @@
   "workspaces": ["packages/*"],
   "scripts": {
     "run-client": "cd ./packages/web && yarn start",
-    "run-server": "cd ./packages/game-server && yarn start"
+    "run-server": "cd ./packages/game-server && yarn start",
+    "start": "yarn run run-server"
   }
 }

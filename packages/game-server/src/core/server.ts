@@ -5,8 +5,14 @@ import * as http from "http";
 import { SocketServer } from "../core/SocketServer";
 import { LoggerService } from "../services/LoggerService";
 
+const path = require("path");
 const PORT = 4500;
 const app = express();
+
+app.use(express.static(path.join(__dirname, "../../client")));
+
+app.get("/", (req, res, next) => res.sendFile(__dirname + "./index.html"));
+
 const httpServer = http.createServer(app);
 const ioServer = io(httpServer, { pingTimeout: 200000, pingInterval: 300000 });
 

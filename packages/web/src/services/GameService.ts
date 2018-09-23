@@ -7,9 +7,12 @@ import {
 } from "@rcg/common";
 import * as io from "socket.io-client";
 
-const ioClient: SocketIOClient.Socket = io("http://localhost:4500", {
-  timeout: 200000
-});
+const ioClient: SocketIOClient.Socket = io(
+  document.location.protocol + "//" + document.location.host,
+  {
+    timeout: 200000
+  }
+);
 
 class GameService {
   /**

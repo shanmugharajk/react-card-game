@@ -1,0 +1,215 @@
+/******************************************************************************
+* Do not remove this notice.
+*
+* Copyright 2001 by Mike Hall.
+* See http://www.brainjar.com for terms of use.                                                  
+******************************************************************************/
+.card-container {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+  border: 1px solid #6536c842;
+}
+
+.card,
+.card-clickable {
+  font-size: 20pt;
+  position: relative;
+  width: 3.75em;
+  height: 5em;
+  float: left;
+  margin-right: 0.5em;
+  margin-bottom: 0.5em;
+  box-shadow: 0 1px 2px 0 rgba(2, 15, 27, 0.13);
+}
+
+.card-clickable {
+  cursor: pointer;
+  border: 1px solid #6536c842;
+}
+
+.card-clickable:hover {
+  border-width: 2px;
+}
+
+.front {
+  background-color: #ffffff;
+  color: #000000;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.red {
+  color: #ff0000;
+  border-color: red;
+}
+
+.index {
+  font-size: 50%;
+  font-weight: bold;
+  text-align: center;
+  position: absolute;
+  left: 0.25em;
+}
+
+.ace {
+  font-size: 300%;
+  position: absolute;
+  left: 0.325em;
+  top: 0.5em;
+}
+
+.face {
+  border: 1px solid #000000;
+  position: absolute;
+  left: 0.5em;
+  top: 0.45em;
+  width: 2.6em;
+  height: 4em;
+}
+
+.spotA1 {
+  position: absolute;
+  left: 0.6em;
+  top: 0.5em;
+}
+
+.spotA2 {
+  position: absolute;
+  left: 0.6em;
+  top: 1.5em;
+}
+
+.spotA3 {
+  position: absolute;
+  left: 0.6em;
+  top: 2em;
+}
+
+.spotA4 {
+  position: absolute;
+  left: 0.6em;
+  top: 2.5em;
+}
+
+.spotA5 {
+  position: absolute;
+  left: 0.6em;
+  top: 3.5em;
+}
+
+.spotB1 {
+  position: absolute;
+  left: 1.55em;
+  top: 0.5em;
+}
+
+.spotB2 {
+  position: absolute;
+  left: 1.55em;
+  top: 1em;
+}
+
+.spotB3 {
+  position: absolute;
+  left: 1.55em;
+  top: 2em;
+}
+
+.spotB4 {
+  position: absolute;
+  left: 1.55em;
+  top: 3em;
+}
+
+.spotB5 {
+  position: absolute;
+  left: 1.55em;
+  top: 3.5em;
+}
+
+.spotC1 {
+  position: absolute;
+  left: 2.5em;
+  top: 0.5em;
+}
+
+.spotC2 {
+  position: absolute;
+  left: 2.5em;
+  top: 1.5em;
+}
+
+.spotC3 {
+  position: absolute;
+  left: 2.5em;
+  top: 2em;
+}
+
+.spotC4 {
+  position: absolute;
+  left: 2.5em;
+  top: 2.5em;
+}
+
+.spotC5 {
+  position: absolute;
+  left: 2.5em;
+  top: 3.5em;
+}
+
+/* NEEDS TO MOVE */
+@media only screen and (max-width: 1300px) and (min-width: 767px) {
+  .ui.stackable.grid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #message {
+    width: calc(100vw - 30px);
+  }
+}
+
+.board {
+  height: calc(100vh - 205px);
+  overflow-y: auto;
+}
+
+.login {
+  padding-top: 50px;
+  width: 500px;
+}
+
+.scroll-1::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #f5f5f5;
+}
+
+.scroll-1::-webkit-scrollbar {
+  width: 3px;
+  background-color: #f5f5f5;
+}
+
+.scroll-1::-webkit-scrollbar-thumb {
+  background-color: #6536c8;
+}
+
+.ui .menu {
+  border-radius: 0px;
+}
+
+.ui.small.table {
+  border: 0.08em solid rgb(101, 54, 200);
+}
+
+.ui.small.table>thead>tr>th {
+  background: rgb(101, 54, 200);
+  color: white;
+}
