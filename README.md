@@ -26,6 +26,6 @@ To know about the rule's execute the above mentioned commands and navigate to <h
 
 - Improve the build system.
 - Create a roadmap.
-- User redis to store the game data.
+- Use redis to store the game data.
 - Deploy in heroku with docker image.
-- Build a project site with architectue, how to play and demo.
+- Build a project site explaining the architectue, how to play and demo etc..
