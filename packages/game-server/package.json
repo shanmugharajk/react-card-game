@@ -28,7 +28,7 @@
     "uuid": "^3.3.2"
   },
   "scripts": {
-    "start": "nodemon",
+    "start": "./node_modules/.bin/nodemon",
     "test": "jest"
   }
 }
