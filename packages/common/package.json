@@ -1,0 +1,16 @@
+{
+  "name": "@rcg/common",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "repository": "https://shansfk@bitbucket.org/shansfk/react-card-game.git",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf ./dist && tsc"
+  },
+  "devDependencies": {
+    "rimraf": "^2.6.2",
+    "tslint": "^5.11.0",
+    "typescript": "^3.0.3"
+  }
+}

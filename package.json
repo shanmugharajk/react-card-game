@@ -1,0 +1,9 @@
+{
+  "name": "react-card-game",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "run-client": "cd ./packages/web && yarn start",
+    "run-server": "cd ./packages/game-server && yarn start"
+  }
+}

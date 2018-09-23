@@ -1,45 +1,24 @@
-# react-card-game
-A multiplayer game built on Socket.io, React-redux and Redis.
+# ReactCardGame
 
-## Project URL
-https://shanmugharajk.github.io/react-card-game/
+A multliplayer game built with socket.io + react + nodejs + typescript.
 
-## To run
+## How to run
 
-### Pre requisites
-- NodeJs
-- Redis
+Navigate to the root directory and run the following.
 
-Install these two softwares. Then clone the repository by
-
-```
-git clone https://github.com/shansfk/react-card-game.git
-```
-
-Then navigate to the server folder in the repository and run
-
-```
 yarn install
 
-yarn start
-```
+yarn run run-server
 
-To run client navigate to client folder then do.
+yarn run run-client
 
-```
-yarn install
+## Game rules
 
-yarn start
-```
+To know about the rule's execute the above mentioned commands and navigate to <http://localhost:3000>.
 
-For windows run the following (run the same in server/client folder). The change is due to the variation in setting the env variables.
+## TODO
 
-```
-yarn install
-
-yarn run start-win
-```
-
-(Note : Sometimes while running the server for the first time it may fail. so run the same command again and it should be fine.)
-
-Regarding the rules and for more information about the game please refer [link here](https://shanmugharajk.github.io/react-card-game/)
+- Create a roadmap
+- User redis to store the game data.
+- Deploy in heroku with docker image.
+- Build a project site with architectue, how to play and demo.
