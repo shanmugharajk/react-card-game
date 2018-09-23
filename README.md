@@ -12,6 +12,11 @@ yarn run run-server
 
 yarn run run-client
 
+## Game Screen
+
+<img width="1439" alt="react card game" src="https://user-images.githubusercontent.com/11159061/45929302-61537500-bf6d-11e8-8c2d-c27facd515f9.png">
+
+
 ## Game rules
 
 To know about the rule's execute the above mentioned commands and navigate to <http://localhost:3000>.
