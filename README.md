@@ -14,7 +14,7 @@ yarn run run-client
 
 ## Game Screen
 
-<img width="1439" alt="react card game" src="https://user-images.githubusercontent.com/11159061/45929302-61537500-bf6d-11e8-8c2d-c27facd515f9.png">
+<img width="1440" alt="react card game home" src="https://user-images.githubusercontent.com/11159061/45929339-e179da80-bf6d-11e8-9395-91377159aa5b.png">
 
 
 ## Game rules
