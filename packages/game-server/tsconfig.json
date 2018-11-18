@@ -11,13 +11,8 @@
     "emitDecoratorMetadata": true,
     "moduleResolution": "node",
     "outDir": "dist",
-    "lib": [
-      "es2015",
-      "dom"
-    ]
+    "lib": ["es2015", "dom"]
   },
-  "include": [
-    "src/**/*.ts",
-    "src/**/*.tsx"
-  ],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "paths": { "@rcg/common": "../common/src" }
 }

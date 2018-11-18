@@ -10,6 +10,8 @@ Navigate to the root directory and run the following.
 
 yarn install
 
+yarn run build:common
+
 yarn run run-server
 
 yarn run run-client

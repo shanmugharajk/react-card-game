@@ -2,7 +2,7 @@
   "name": "@rcg/game-server",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "https://shansfk@bitbucket.org/shansfk/react-card-game.git",
+  "repository": "https://github.com/shanmugharajk/react-card-game.git",
   "author": "shanmugharajk <shanmugharaj.k@outlook.com>",
   "license": "MIT",
   "devDependencies": {

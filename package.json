@@ -2,12 +2,13 @@
   "name": "react-card-game",
   "private": true,
   "workspaces": {
-    "packages": ["packages/*"]
+    "packages": [
+      "packages/*"
+    ]
   },
   "scripts": {
-    "run-client": "cd ./packages/web && yarn start",
-    "run-server": "cd ./packages/game-server && yarn start",
-
+    "run:client": "cd ./packages/web && yarn start",
+    "run:server": "cd ./packages/game-server && yarn start",
     "build:client": "cd ./packages/web && yarn run build",
     "build:common": "cd ./packages/common && yarn run build",
     "build:server": "cd ./packages/game-server && yarn run build"
