@@ -23,7 +23,7 @@
   "dependencies": {
     "@rcg/common": "1.0.0",
     "@types/bluebird": "^3.5.24",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "socket.io": "^2.1.1",
     "socket.io-client": "^2.1.1",
     "uuid": "^3.3.2"
